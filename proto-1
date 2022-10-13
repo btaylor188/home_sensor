@@ -77,7 +77,7 @@ binary_sensor:
     id: occupancy
     device_class: occupancy
     filters:
-      - delayed_off: 15s
+      - delayed_off: 5s
     lambda: |-
       if ( id(mmwave).state or id(pir_motion_sensor).state) {
         return true;
